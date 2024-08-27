@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import DockBar from "@/components/DockBar";  // 確保這裡的路徑正確
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,10 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-
-
         {children}
-
+        <DockBar />
       </body>
     </html>
   );

@@ -1,0 +1,20 @@
+.hero-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-shape svg {
+    position: relative;
+    display: block;
+    width: calc(154% + 1.3px);
+    height: 91px;
+}
+
+.hero-shape .shape-fill {
+    fill: #FFFFFF;
+}
