@@ -64,6 +64,7 @@
     @apply border-border;
   }
   body {
-    @apply   text-white leading-loose;
+    @apply  bg-gray-900  text-white leading-loose;
   }
 }
+

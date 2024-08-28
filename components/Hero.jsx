@@ -1,27 +1,47 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
 import Header from "./Header";
 import SparklesText from "./magicui/sparkles-text";
 import Photo from "./Photo";
 import styles from "./Hero.module.css";
+
 const Hero = () => {
   return (
     <>
-      <div className="h-screen bg-cover bg-center bg-no-repeat z-10 flex bg-[url('/background.png')]  items-center justify-center text-white">
+      <div className="h-screen bg-cover bg-center bg-no-repeat z-10 flex bg-[url('/background.png')] items-center justify-center text-white">
         <Header />
-        <div className="flex flex-col  items-center justify-center p-4 rounded-lg  text-center">
+        <div className="flex flex-col items-center justify-center p-4 rounded-lg text-center">
           <div className="mb-8 xl:mb-0">
             <Photo />
           </div>
 
-          <h1>
-            <SparklesText
-              text={"Welcome to My Portfolio"}
-              className="text-4xl md:text-6xl font-bold mb-4"
-            />{" "}
-          </h1>
-          <p className="text-lg md:text-2xl">
-            I am a [Your Profession], and this is my work.
-          </p>
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-6xl font-bold mb-6"
+          >
+            <SparklesText text={"I'm Trever"} />
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg md:text-xl max-w-2xl mx-auto mb-4"
+          >
+            IT Specialist & Web Developer
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-base md:text-lg max-w-2xl mx-auto"
+          >
+            Passionate about creating accessible and innovative web solutions that make a difference, 
+            while navigating the tech world from my electric wheelchair.
+          </motion.p>
         </div>
       </div>
       <div className={styles["hero-shape"]}>

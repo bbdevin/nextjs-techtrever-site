@@ -1,9 +1,7 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import DockBar from "@/components/DockBar";  // 確保這裡的路徑正確
+import DockBar from "@/components/DockBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

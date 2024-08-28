@@ -103,7 +103,7 @@ const About = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <SparklesText text="About Me" />
+                <SparklesText text="My Skills" />
             </motion.div>
             <div className="flex flex-col md:flex-row items-start justify-between w-full">
                 <motion.div 
@@ -128,7 +128,7 @@ const About = () => {
                         className="text-3xl font-semibold mb-6"
                         variants={containerVariants}
                     >
-                        <SparklesText text="My Skills" />
+                     
                     </motion.div>
                     <motion.div 
                         className="bg-gray-800 rounded-lg p-6 shadow-lg overflow-hidden"

@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
-import Image from "next/image";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -8,8 +8,11 @@ export default function Home() {
       <section id="hero" className="h-screen">
         <Hero />
       </section>
-      <section id="about" className="min-h-screen bg-gray-900 text-white">
+      <section id="skills" className="min-h-screen text-white">
         <About />
+      </section>
+      <section id="experience" className="min-h-screen text-white">
+        <Experience />
       </section>
     </main>
   );
