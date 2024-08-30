@@ -116,7 +116,7 @@ const Experience = () => {
     },
     {
       date: "September 2013 - January 2018",
-      title: "Department of Computer Science and Information ",
+      title: "Department of Computer Science and Information Engineering",
       subtitle: "National University of Kaohsiung",
       isEducation: true
     }
