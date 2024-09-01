@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="h-screen bg-cover bg-center bg-no-repeat z-10 flex bg-[url('/background.png')] items-center justify-center text-white">
         <Header />
         <div className="flex flex-col items-center justify-center p-4 rounded-lg text-center">
-          <div className="mb-8 xl:mb-0">
+          <div className="mb-4 sm:mb-6 md:mb-8">
             <Photo />
           </div>
 
@@ -19,27 +19,27 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
           >
             <SparklesText text={"I'm Trever"} />
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl max-w-2xl mx-auto mb-4"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-xl sm:max-w-2xl mx-auto mb-2 sm:mb-4"
           >
             IT Specialist & Web Developer
           </motion.p>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base md:text-lg max-w-2xl mx-auto"
+            className="text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto"
           >
-            Passionate about creating accessible and innovative web solutions that make a difference, 
+            Passionate about creating accessible and innovative web solutions that make a difference,
             while navigating the tech world from my electric wheelchair.
           </motion.p>
         </div>

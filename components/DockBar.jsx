@@ -1,75 +1,93 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
-import { FaHome, FaGithub, FaUser, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
 
 const dockItems = [
-  { name: "Home", icon: FaHome, color: "#4A5568", action: "scrollTop" },
-  { name: "GitHub", icon: FaGithub, color: "#333", href: "https://github.com/yourusername" },
-  { name: "About Me", icon: FaUser, color: "#38B2AC", href: "#about" },
-  { name: "Instagram", icon: FaInstagram, color: "#E1306C", href: "https://instagram.com/yourusername" },
-  { name: "LinkedIn", icon: FaLinkedin, color: "#0077B5", href: "https://linkedin.com/in/yourusername" }
+    { name: "Home", icon: FaHome, color: "#60A5FA", href: "#hero", tooltip: "回到頂部" },
+    { name: "About", icon: FaUser, color: "#38B2AC", href: "#skills", tooltip: "關於我" },
+    { name: "Experience", icon: FaBriefcase, color: "#ED8936", href: "#experience", tooltip: "工作經驗" },
+    { name: "Projects", icon: FaCode, color: "#4299E1", href: "#projects", tooltip: "專案作品" },
+    { name: "Contact", icon: FaEnvelope, color: "#48BB78", href: "#contact", tooltip: "聯絡我" }
 ];
 
 const DockBar = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const controls = useAnimation();
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            setIsVisible(scrollPosition > 100);
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                const rect = skillsSection.getBoundingClientRect();
+                const isSkillsVisible = rect.top <= window.innerHeight / 2;
+                setIsVisible(isSkillsVisible || isMobile);
+            }
+        };
+
+        const handleResize = () => {
+            const newIsMobile = window.innerWidth < 768;
+            setIsMobile(newIsMobile);
+            setIsVisible(newIsMobile);
+            if (!newIsMobile) {
+                handleScroll();
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        handleScroll();
 
-    const handleClick = async (item) => {
-        if (item.action === "scrollTop") {
-            // 開始動畫
-            await controls.start({
-                y: [-10, 0, -10],
-                transition: { duration: 0.5 }
-            });
-            // 滾動到頂部
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else if (item.href) {
-            if (item.href.startsWith('http')) {
-                window.open(item.href, '_blank');
-            } else {
-                document.querySelector(item.href).scrollIntoView({ behavior: 'smooth' });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isMobile]);
+
+    const handleClick = async (href) => {
+        if (href.startsWith('#')) {
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
             }
+        } else if (href.startsWith('http')) {
+            window.open(href, '_blank');
         }
     };
 
     return (
         <AnimatePresence>
             {isVisible && (
-                <motion.div 
+                <motion.div
                     className="fixed bottom-4 left-1/2 z-50"
                     initial={{ y: 100, x: "-50%", opacity: 0 }}
                     animate={{ y: 0, x: "-50%", opacity: 1 }}
                     exit={{ y: 100, x: "-50%", opacity: 0 }}
                     transition={{ type: "spring", stiffness: 260, damping: 20 }}
                 >
-                    <motion.div 
-                        className="flex space-x-2 bg-gray-800 p-2 rounded-full"
+                    <motion.div
+                        className="flex space-x-2 bg-gray-900 bg-opacity-60 backdrop-blur-md p-3 rounded-full shadow-lg"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
                         {dockItems.map((item, index) => (
-                            <motion.button 
-                                key={index}
-                                className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
-                                whileHover={{ scale: 1.2, rotate: 5 }}
-                                whileTap={{ scale: 0.9 }}
-                                onClick={() => handleClick(item)}
-                                animate={controls}
-                            >
-                                <item.icon className="w-6 h-6" style={{ color: item.color }} />
-                            </motion.button>
+                            <div key={index} className="relative group">
+                                <motion.button
+                                    className="p-2 rounded-full bg-gray-800 bg-opacity-70 hover:bg-opacity-100 transition-colors"
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    onClick={() => handleClick(item.href)}
+                                    animate={controls}
+                                >
+                                    <item.icon className="w-5 h-5" style={{ color: item.color }} />
+                                </motion.button>
+                                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 bg-opacity-90 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                    {item.tooltip}
+                                </div>
+                            </div>
                         ))}
                     </motion.div>
                 </motion.div>

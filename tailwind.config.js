@@ -23,10 +23,13 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: "#1c1c22",
+        primary: {
+          DEFAULT: "#1c1c22",
+          foreground: "#ffffff",
+        },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#00ff99",
+          foreground: "#00E187",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -79,12 +82,23 @@ module.exports = {
             },
           },
         },
+        tilt: {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(0.5deg)',
+          },
+          '75%': {
+            transform: 'rotate(-0.5deg)',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-
+        tilt: 'tilt 10s infinite linear',
       },
     },
   },

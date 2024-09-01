@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       </section>
       <section id="experience" className="min-h-screen text-white">
         <Experience />
+      </section>
+      <section id="projects" className="min-h-screen text-white">
+        <Projects />
       </section>
     </main>
   );
