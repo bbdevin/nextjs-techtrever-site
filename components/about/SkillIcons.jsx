@@ -1,21 +1,22 @@
 import { motion } from 'framer-motion';
 import { skills } from '../../data/skillsData';
 
-const SkillIcons = ({ tabVariants, containerVariants }) => (
+const SkillIcons = ({ containerVariants }) => (
     <motion.div
-        variants={tabVariants}
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
+        className="w-full"
     >
         {skills.map((category, categoryIndex) => (
             <motion.div
                 key={categoryIndex}
-                className="mb-6 last:mb-0"
+                className="mb-6 last:mb-0 w-full"
                 variants={containerVariants}
             >
                 <h4 className="text-xl font-semibold mb-3 text-blue-300">{category.category}</h4>
-                <div className="flex flex-wrap -mx-1">
+                <div className="flex flex-wrap -mx-1 w-full">
                     {category.items.map((skill, index) => (
                         <motion.span
                             key={index}

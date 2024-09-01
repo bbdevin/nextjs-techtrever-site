@@ -1,15 +1,17 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
-import { FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
 
 const dockItems = [
-    { name: "Home", icon: FaHome, color: "#60A5FA", href: "#hero", tooltip: "回到頂部" },
-    { name: "About", icon: FaUser, color: "#38B2AC", href: "#skills", tooltip: "關於我" },
-    { name: "Experience", icon: FaBriefcase, color: "#ED8936", href: "#experience", tooltip: "工作經驗" },
-    { name: "Projects", icon: FaCode, color: "#4299E1", href: "#projects", tooltip: "專案作品" },
-    { name: "Contact", icon: FaEnvelope, color: "#48BB78", href: "#contact", tooltip: "聯絡我" }
+    { name: "Home", icon: FaHome, color: "#60A5FA", href: "#hero", tooltip: "Home" },
+    { name: "About", icon: FaUser, color: "#38B2AC", href: "#skills", tooltip: "About" },
+    { name: "Experience", icon: FaBriefcase, color: "#ED8936", href: "#experience", tooltip: "Experience" },
+    { name: "Projects", icon: FaCode, color: "#4299E1", href: "#projects", tooltip: "Projects" },
+    { name: "Contact", icon: FaEnvelope, color: "#48BB78", href: "#contact", tooltip: "Contact" },
+    { name: "GitHub", icon: FaGithub, color: "#ffffff", href: "https://github.com/yourusername", tooltip: "GitHub" },
+    { name: "LinkedIn", icon: FaLinkedin, color: "#0077B5", href: "https://linkedin.com/in/yourusername", tooltip: "LinkedIn" }
 ];
 
 const DockBar = () => {
