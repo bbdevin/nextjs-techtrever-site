@@ -16,18 +16,18 @@ export const experiences = [
             "Utilized VMware to set up Rocky Linux and Windows Server VMs"
         ],
         technologies: [
-            { name: "Web Development", icon: BsGlobe, color: "text-blue-500" },
-            { name: "Server Management", icon: FaServer, color: "text-green-500" },
-            { name: "VMware", icon: SiVmware, color: "text-blue-400" },
-            { name: "Rocky Linux", icon: SiRockylinux, color: "text-green-600" },
-            { name: "Windows Server", icon: FaWindows, color: "text-blue-500" },
-            { name: "Information Security", icon: FaShieldAlt, color: "text-yellow-500" },
-            { name: "Laravel", icon: FaLaravel, color: "text-red-500" },
-            { name: "Nginx", icon: SiNginx, color: "text-green-500" },
-            { name: "PHP", icon: FaPhp, color: "text-purple-500" },
-            { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
-            { name: "Vue.js", icon: FaVuejs, color: "text-green-400" },
-            { name: "MySQL", icon: SiMysql, color: "text-blue-600" }
+            { name: "Web Development", icon: BsGlobe, color: "#1e90ff" },
+            { name: "Server Management", icon: FaServer, color: "#68a063" },
+            { name: "VMware", icon: SiVmware, color: "#607078" },
+            { name: "Rocky Linux", icon: SiRockylinux, color: "#10b981" },
+            { name: "Windows Server", icon: FaWindows, color: "#00a4ef" },
+            { name: "Information Security", icon: FaShieldAlt, color: "#ffd700" },
+            { name: "Laravel", icon: FaLaravel, color: "#ff2d20" },
+            { name: "Nginx", icon: SiNginx, color: "#009639" },
+            { name: "PHP", icon: FaPhp, color: "#787cb5" },
+            { name: "JavaScript", icon: FaJs, color: "#f0db4f" },
+            { name: "Vue.js", icon: FaVuejs, color: "#42b883" },
+            { name: "MySQL", icon: SiMysql, color: "#00758f" }
         ],
         isEducation: false
     },
