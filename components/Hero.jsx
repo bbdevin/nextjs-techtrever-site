@@ -8,9 +8,9 @@ import styles from "./Hero.module.css";
 const Hero = () => {
   return (
     <>
-      <div className="h-screen bg-cover bg-center bg-no-repeat z-10 flex bg-[url('/background.png')] items-center justify-center text-white">
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat z-10 flex flex-col bg-[url('/background.png')] text-white">
         <Header />
-        <div className="flex flex-col items-center justify-center p-4 rounded-lg text-center">
+        <div className="flex-grow flex flex-col items-center justify-center p-4 rounded-lg text-center mt-32 sm:mt-36 md:mt-40 lg:mt-44"> {/* 增加上邊距 */}
           <div className="mb-4 sm:mb-6 md:mb-8">
             <Photo />
           </div>

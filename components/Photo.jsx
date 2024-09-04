@@ -29,11 +29,12 @@ const Photo = () => {
                 <Image
                     className="object-cover rounded-full"
                     quality={100}
-
+                    width={500}
+                    height={500}
                     src={avatar}
-                    alt="My Photo"
-                    fill
+                    alt="Trever - IT 專家與網頁開發者的個人照片"
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800 opacity-30"></div>

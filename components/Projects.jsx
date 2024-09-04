@@ -12,10 +12,10 @@ const TechButton = ({ tech, icon: Icon, color }) => (
     </div>
 );
 
-const ProjectItem = ({ title, description, technologies, link, image, isPrivate }) => {
+const ProjectItem = ({ title, description, technologies, link, image, isPrivate, index }) => {
     const [isHovered, setIsHovered] = useState(false);
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.3 });
+    const isInView = useInView(ref, { once: false, amount: 0.3 });
 
     const defaultImage = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
 
@@ -25,7 +25,7 @@ const ProjectItem = ({ title, description, technologies, link, image, isPrivate 
             className="bg-gray-800 rounded-lg shadow-lg overflow-hidden relative"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
             whileHover={{ scale: 1.02 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
@@ -90,17 +90,25 @@ const ProjectItem = ({ title, description, technologies, link, image, isPrivate 
 
 const Projects = () => {
     const [isMounted, setIsMounted] = useState(false);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false, amount: 0.1 });
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
 
     return (
-        <div className="container mx-auto py-8 sm:py-12 md:py-16 px-4">
+        <motion.div 
+            ref={ref}
+            className="container mx-auto py-8 sm:py-12 md:py-16 px-4"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <motion.h2
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 text-center"
                 initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
             >
                 <SparklesText text="My Projects" />
@@ -108,11 +116,11 @@ const Projects = () => {
             {isMounted && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {projects.map((project, index) => (
-                        <ProjectItem key={index} {...project} />
+                        <ProjectItem key={index} {...project} index={index} />
                     ))}
                 </div>
             )}
-        </div>
+        </motion.div>
     );
 };
 
