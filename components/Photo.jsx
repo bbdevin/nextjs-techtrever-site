@@ -24,19 +24,18 @@ const Photo = () => {
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, ease: "easeIn" }}
-                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] relative"
+                className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96"
             >
                 <Image
                     className="object-cover rounded-full"
                     quality={100}
-                    width={500}
-                    height={500}
                     src={avatar}
                     alt="Trever - IT 專家與網頁開發者的個人照片"
                     priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    fill
+                    sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 16rem, (max-width: 1280px) 20rem, 24rem"
                 />
-                <div className="absolute inset-0 rounded-full overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden rounded-full">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800 opacity-30"></div>
                 </div>
                 <div className="absolute -inset-1 sm:-inset-1.5 md:-inset-2 lg:-inset-2.5 xl:-inset-3 rounded-full overflow-hidden">
