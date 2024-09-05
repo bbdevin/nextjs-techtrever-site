@@ -17,7 +17,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4"
+          className="magic-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4"
         >
           <SparklesText text={"I'm Trever"} />
         </motion.h1>
@@ -26,7 +26,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-sm sm:text-base md:text-lg lg:text-xl max-w-xl sm:max-w-2xl mx-auto mb-1 sm:mb-2 md:mb-3"
+          className="magic-text text-sm sm:text-base md:text-lg lg:text-xl max-w-xl sm:max-w-2xl mx-auto mb-1 sm:mb-2 md:mb-3"
         >
           IT Specialist & Web Developer
         </motion.p>

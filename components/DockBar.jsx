@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const dockItems = [
     { name: "Home", icon: FaHome, color: "#60A5FA", href: "#hero", tooltip: "Home" },
-    { name: "About", icon: FaUser, color: "#38B2AC", href: "#skills", tooltip: "About" },
+    { name: "About", icon: FaUser, color: "#38B2AC", href: "#about", tooltip: "About" },
     { name: "Experience", icon: FaBriefcase, color: "#ED8936", href: "#experience", tooltip: "Experience" },
     { name: "Projects", icon: FaCode, color: "#4299E1", href: "#projects", tooltip: "Projects" },
     { name: "Contact", icon: FaEnvelope, color: "#48BB78", href: "#contact", tooltip: "Contact" },
@@ -21,11 +21,11 @@ const DockBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const skillsSection = document.getElementById('skills');
-            if (skillsSection) {
-                const rect = skillsSection.getBoundingClientRect();
-                const isSkillsVisible = rect.top <= window.innerHeight / 2;
-                setIsVisible(isSkillsVisible || isMobile);
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                const rect = aboutSection.getBoundingClientRect();
+                const isAboutVisible = rect.top <= window.innerHeight / 2;
+                setIsVisible(isAboutVisible || isMobile);
             }
         };
 

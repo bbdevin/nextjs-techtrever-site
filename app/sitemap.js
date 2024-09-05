@@ -10,7 +10,7 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#skills`,
+      url: `${baseUrl}/#about`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,

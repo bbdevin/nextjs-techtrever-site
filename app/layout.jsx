@@ -1,10 +1,13 @@
-import { Inter } from "next/font/google";
+import { Almendra } from "next/font/google";
 import "./globals.css";
 import DockBar from "@/components/DockBar";
 import Footer from "@/components/Footer";
 import Script from 'next/script';
 
-const inter = Inter({ subsets: ["latin"] });
+const almendra = Almendra({ 
+  weight: ['400', '700'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: {
@@ -97,7 +100,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${inter.className} vsc-initialized`}>
+      <body className={`${almendra.className} vsc-initialized`}>
         {children}
         <DockBar />
         <Footer />

@@ -10,7 +10,7 @@ export default function Home() {
       <section id="hero" className="h-screen">
         <Hero />
       </section>
-      <section id="skills" className="py-12 md:py-16 lg:min-h-screen text-white">
+      <section id="about" className="py-12 md:py-16 lg:min-h-screen text-white">
         <About />
       </section>
       <section id="experience" className="py-12 md:py-16 lg:min-h-screen text-white">
