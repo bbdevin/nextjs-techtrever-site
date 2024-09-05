@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="h-full bg-cover bg-center bg-no-repeat z-10 flex flex-col bg-[url('/background.png')] text-white">
       <Header />
-      <div className="flex-grow flex flex-col items-center justify-center p-4 rounded-lg text-center mt-12 sm:mt-16 md:mt-24 lg:mt-32">
+      <div className="flex-grow flex flex-col items-center justify-center p-4 rounded-lg text-center">
         <div className="mb-3 sm:mb-4 md:mb-6">
           <Photo />
         </div>

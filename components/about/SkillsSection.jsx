@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import SkillTabs from './SkillTabs';
 import SkillIcons from './SkillIcons';
 import SkillLevels from './SkillLevels';
@@ -7,15 +7,23 @@ import SkillLevels from './SkillLevels';
 const SkillsSection = ({ containerVariants }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false, amount: 0.3 });
 
     useEffect(() => {
         setIsMounted(true);
-        const interval = setInterval(() => {
-            setActiveTab((prev) => (prev === 0 ? 1 : 0));
-        }, 5000);
+    }, []);
+
+    useEffect(() => {
+        let interval;
+        if (isInView) {
+            interval = setInterval(() => {
+                setActiveTab((prev) => (prev === 0 ? 1 : 0));
+            }, 5000);
+        }
 
         return () => clearInterval(interval);
-    }, []);
+    }, [isInView]);
 
     const tabVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -25,6 +33,7 @@ const SkillsSection = ({ containerVariants }) => {
 
     return (
         <motion.div
+            ref={ref}
             className="bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-2xl w-full overflow-hidden"
             variants={containerVariants}
         >
