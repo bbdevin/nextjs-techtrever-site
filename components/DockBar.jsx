@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
-import { FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope, FaGithub, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 
 const dockItems = [
@@ -10,8 +10,8 @@ const dockItems = [
     { name: "Experience", icon: FaBriefcase, color: "#ED8936", href: "#experience", tooltip: "Experience" },
     { name: "Projects", icon: FaCode, color: "#4299E1", href: "#projects", tooltip: "Projects" },
     { name: "Contact", icon: FaEnvelope, color: "#48BB78", href: "#contact", tooltip: "Contact" },
-    { name: "GitHub", icon: FaGithub, color: "#ffffff", href: "https://github.com/yourusername", tooltip: "GitHub" },
-    { name: "LinkedIn", icon: FaLinkedin, color: "#0077B5", href: "https://linkedin.com/in/yourusername", tooltip: "LinkedIn" }
+    { name: "GitHub", icon: FaGithub, color: "#ffffff", href: "https://github.com/bbdevin", tooltip: "GitHub" },
+    { name: "Instagram", icon: FaInstagram, color: "#E1306C", href: "https://instagram.com/__trever_c_c", tooltip: "Instagram" }
 ];
 
 const DockBar = () => {

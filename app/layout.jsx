@@ -62,6 +62,17 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({ children }) {
@@ -79,8 +90,8 @@ export default function RootLayout({ children }) {
               "jobTitle": "IT 專家 & 網頁開發者",
               "url": "https://techtrever.site",
               "sameAs": [
-                "https://github.com/yourusername",
-                "https://linkedin.com/in/yourusername"
+                "https://github.com/bbdevin",
+                "https://instagram.com/__trever_c_c"
               ]
             })
           }}

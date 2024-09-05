@@ -10,16 +10,16 @@ export default function Home() {
       <section id="hero" className="h-screen">
         <Hero />
       </section>
-      <section id="skills" className="min-h-screen text-white">
+      <section id="skills" className="py-12 md:py-16 lg:min-h-screen text-white">
         <About />
       </section>
-      <section id="experience" className="min-h-screen text-white">
+      <section id="experience" className="py-12 md:py-16 lg:min-h-screen text-white">
         <Experience />
       </section>
-      <section id="projects" className="min-h-screen text-white">
+      <section id="projects" className="py-12 md:py-16 lg:min-h-screen text-white">
         <Projects />
       </section>
-      <section id="contact" className="min-h-screen text-white">  {/* 新增這個部分 */}
+      <section id="contact" className="py-12 md:py-16 lg:min-h-screen text-white">
         <Contact />
       </section>
     </main>

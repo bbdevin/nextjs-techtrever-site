@@ -100,13 +100,13 @@ const Projects = () => {
     return (
         <motion.div 
             ref={ref}
-            className="container mx-auto py-8 sm:py-12 md:py-16 px-4"
+            className="container mx-auto px-4" // 減少 padding
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
             <motion.h2
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 text-center"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-center"
                 initial={{ opacity: 0, y: -50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
@@ -114,7 +114,7 @@ const Projects = () => {
                 <SparklesText text="My Projects" />
             </motion.h2>
             {isMounted && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {projects.map((project, index) => (
                         <ProjectItem key={index} {...project} index={index} />
                     ))}

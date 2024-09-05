@@ -33,9 +33,9 @@ const About = () => {
     return (
         <motion.div
             ref={ref}
-            id="about"  // 添加這個 id
+            id="about"
             style={{ opacity }}
-            className="container mx-auto py-8 sm:py-12 md:py-16 px-4 min-h-screen flex flex-col justify-center relative w-full overflow-hidden"
+            className="container mx-auto px-4 flex flex-col justify-start relative w-full overflow-hidden"
         >
             <AboutTitle isInView={isInView} containerVariants={containerVariants} />
             <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-4 sm:gap-6 lg:gap-8">

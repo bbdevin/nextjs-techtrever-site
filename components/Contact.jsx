@@ -11,8 +11,8 @@ const Contact = () => {
 
     const contactMethods = [
         { icon: FaEnvelope, link: "mailto:trever1121@gmail.com", label: "Email" },
-        { icon: FaGithub, link: "https://github.com/yourusername", label: "GitHub" },
-        { icon: FaInstagram, link: "https://instagram.com/yourusername", label: "Instagram" },
+        { icon: FaInstagram, link: "https://instagram.com/__trever_c_c", label: "Instagram" },
+        { icon: FaGithub, link: "https://github.com/bbdevin", label: "GitHub" },
     ];
 
     return (

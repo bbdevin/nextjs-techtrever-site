@@ -21,7 +21,7 @@ const Experience = () => {
   return (
     <motion.div 
       ref={ref}
-      className="container mx-auto py-12 sm:py-16 px-4"
+      className="container mx-auto px-4" // Modified to reduce padding
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
