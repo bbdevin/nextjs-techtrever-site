@@ -8,41 +8,86 @@ const Hero = () => {
   return (
     <div className="h-screen bg-cover bg-center bg-no-repeat z-10 flex flex-col bg-[url('/background.png')] text-white">
       <Header />
-      <div className="flex flex-col items-center justify-center flex-grow px-4 py-4">
-        <div className="flex flex-col items-center justify-center w-full max-w-4xl space-y-2 text-center sm:space-y-3 md:space-y-4">
-          <div className="transform scale-50 sm:scale-60 md:scale-75 lg:scale-90">
+      <div className="flex flex-col items-center justify-center flex-grow px-4 py-4 mt-16 sm:mt-20 md:mt-24">
+        <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center space-y-[clamp(0.5rem,2vh,1.5rem)]">
+          <div className="transform scale-[clamp(0.3,0.4vh,0.8)] mb-[clamp(0.5rem,2vh,1.5rem)]">
             <Photo />
           </div>
 
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-xl font-bold magic-text sm:text-2xl md:text-3xl lg:text-4xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="text-[clamp(1.25rem,3vw,2.5rem)] font-bold magic-text"
           >
             <SparklesText text={"I'm Trever"} />
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs magic-text sm:text-sm md:text-base lg:text-lg"
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="flex items-center space-x-2"
           >
-            IT Specialist & Web Developer
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="max-w-md text-xs sm:text-sm md:text-base lg:text-lg sm:max-w-lg md:max-w-xl lg:max-w-2xl"
-          >
-            Passionate about creating accessible and innovative web solutions that make a difference,
-            while navigating the tech world from my electric wheelchair.
-          </motion.p>
+            <p className="text-[clamp(0.75rem,2vw,1.25rem)] magic-text">
+              IT Specialist & Web Developer
+            </p>
+            <ScrollMouseIcon />
+          </motion.div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const ScrollMouseIcon = () => {
+  return (
+    <div className="flex flex-col items-center">
+      <motion.svg
+        width="24"
+        height="36"
+        viewBox="0 0 24 36"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        animate={{
+          y: [0, 5, 0],
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      >
+        <rect x="1" y="1" width="22" height="34" rx="11" stroke="white" strokeWidth="2" />
+        <motion.rect
+          x="11"
+          y="8"
+          width="2"
+          height="6"
+          rx="1"
+          fill="white"
+          animate={{
+            y: [0, 4, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+        />
+      </motion.svg>
+      <motion.span
+        className="mt-1 text-xs"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      >
+        Scroll Down
+      </motion.span>
     </div>
   );
 };
