@@ -22,12 +22,16 @@ export const experiences = [
         title: "IT Specialist",
         subtitle: "Academia Sinica",
         duties: [
-            "Developed the institute's official website",
-            "Created reservation system, HR system, summer internship program website, and high school talent registration system",
-            "Implemented information systems to streamline administrative processes",
-            "Ensured secure development practices in compliance with information security requirements",
-            "Provided multiple open-source tools to address internal needs",
-            "Utilized VMware to set up Rocky Linux and Windows Server VMs"
+            
+            "開發大學生培育計畫報名及師生配對系統",
+            "開發高中生培育計畫報名及師生配對系統",
+            "開發人員清冊系統，實現權限分配，使業務負責人能管理各類人員資訊",
+            "建置及維護研究所官方網站和內部系統",
+            "架設、維護和管理 Linux 伺服器環境、Windows Server 及虛擬機",
+           
+            "針對常見攻擊手法，進行系統和網站的安全性開發",
+   
+            "定期進行主機漏洞掃描、檢測和修補",
         ],
         technologies: [
             { name: "Web Development", icon: BsGlobe, color: "#1e90ff" },
