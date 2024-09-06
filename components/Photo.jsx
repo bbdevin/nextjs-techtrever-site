@@ -19,12 +19,12 @@ const Photo = () => {
     });
 
     return (
-        <div className="relative">
+        <div className="relative w-full h-full">
             <motion.div
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, ease: "easeIn" }}
-                className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96"
+                className="relative w-full h-full"
             >
                 <Image
                     className="object-cover rounded-full"

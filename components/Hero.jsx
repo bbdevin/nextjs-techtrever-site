@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import Header from "./Header";
 import SparklesText from "./magicui/sparkles-text";
 import Photo from "./Photo";
@@ -9,8 +10,8 @@ const Hero = () => {
     <div className="h-screen bg-cover bg-center bg-no-repeat z-10 flex flex-col bg-[url('/background.png')] text-white">
       <Header />
       <div className="flex flex-col items-center justify-center flex-grow px-4 py-4 mt-16 sm:mt-20 md:mt-24">
-        <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center space-y-[clamp(0.5rem,2vh,1.5rem)]">
-          <div className="transform scale-[clamp(0.3,0.4vh,0.8)] mb-[clamp(0.5rem,2vh,1.5rem)]">
+        <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center space-y-4">
+          <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
             <Photo />
           </div>
 
@@ -18,7 +19,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="text-[clamp(1.25rem,3vw,2.5rem)] font-bold magic-text"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
           >
             <SparklesText text={"I'm Trever"} />
           </motion.h1>
@@ -27,22 +28,57 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="flex items-center space-x-2"
+            className="flex flex-col items-center space-y-2"
           >
-            <p className="text-[clamp(0.75rem,2vw,1.25rem)] magic-text">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300">
               IT Specialist & Web Developer
             </p>
-            <ScrollMouseIcon />
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 max-w-md">
+              透過刻意練習深化技能，喜歡嘗試新技術開發、解決問題
+            </p>
           </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-2 mt-4">
+            {['Laravel', 'Vue.js', 'JavaScript', 'Tailwind CSS', 'Linux'].map((skill, index) => (
+              <span key={index} className="bg-gray-800 bg-opacity-50 text-gray-300 px-3 py-1 rounded-full text-sm border border-gray-700">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex space-x-4 mt-6">
+            <SocialIcon href="https://github.com/bbdevin" icon={FaGithub} />
+            <SocialIcon href="https://instagram.com/__trever_c_c" icon={FaInstagram} />
+          </div>
+
+          <ScrollMouseIcon />
         </div>
       </div>
     </div>
   );
 };
 
+const SocialIcon = ({ href, icon: Icon }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white transition duration-300"
+    whileHover={{ scale: 1.2 }}
+    whileTap={{ scale: 0.9 }}
+  >
+    <Icon size={24} />
+  </motion.a>
+);
+
 const ScrollMouseIcon = () => {
   return (
-    <div className="flex flex-col items-center">
+    <motion.div 
+      className="flex flex-col items-center mt-4"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+    >
       <motion.svg
         width="24"
         height="36"
@@ -77,8 +113,7 @@ const ScrollMouseIcon = () => {
         />
       </motion.svg>
       <motion.span
-        className="mt-1 text-xs"
-        initial={{ opacity: 0 }}
+        className="mt-1 text-xs text-gray-400"
         animate={{ opacity: [0, 1, 0] }}
         transition={{
           duration: 1.5,
@@ -88,7 +123,7 @@ const ScrollMouseIcon = () => {
       >
         Scroll Down
       </motion.span>
-    </div>
+    </motion.div>
   );
 };
 
