@@ -35,10 +35,10 @@ const Photo = () => {
                     fill
                     sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 16rem, (max-width: 1280px) 20rem, 24rem"
                 />
-                <div className="absolute inset-0 overflow-hidden rounded-full">
+                <div className="absolute inset-0 overflow-hidden rounded-full" aria-hidden="true">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800 opacity-30"></div>
                 </div>
-                <div className="absolute -inset-1 sm:-inset-1.5 md:-inset-2 lg:-inset-2.5 xl:-inset-3 rounded-full overflow-hidden">
+                <div className="absolute -inset-1 sm:-inset-1.5 md:-inset-2 lg:-inset-2.5 xl:-inset-3 rounded-full overflow-hidden" aria-hidden="true">
                     <BorderBeam
                         duration={4}
                         delay={3}

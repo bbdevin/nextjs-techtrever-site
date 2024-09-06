@@ -23,9 +23,10 @@ const Nav = () => {
                                     : "text-white hover:bg-gradient-to-r hover:from-blue-300 hover:via-purple-400 hover:to-pink-400 hover:bg-clip-text hover:text-transparent"
                                 }
                             `}
+                            aria-current={isActive ? "page" : undefined}
                         >
                             {link.name}
-                            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-300 via-purple-400 to-pink-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-300 via-purple-400 to-pink-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true"></span>
                         </Link>
                     </li>
                 );
