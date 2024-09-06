@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Script from 'next/script';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-const almendra = Almendra({ 
+const almendra = Almendra({
   weight: ['400', '700'],
   subsets: ['latin'],
 });
@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Trever | 網頁開發者 & 身障工程師的作品集",
-    description: "探索 Trever 的網頁開發項目和技能。",
+    description: "Nice to meet you! 我是Trever，透過刻意練習深化技能，喜歡嘗試新技術開發、解決問題",
     url: 'https://techtrever.site',
     siteName: 'Trever 的個人作品集',
     images: [
@@ -48,7 +48,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Trever | 網頁開發者 & 身障工程師的作品集",
-    description: "探索 Trever 的網頁開發項目和技能。",
+    description: "Nice to meet you! 我是Trever，透過刻意練習深化技能，喜歡嘗試新技術開發、解決問題",
     images: ['https://techtrever.site/og-image.jpg'],
   },
   robots: {
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
                 "https://github.com/bbdevin",
                 "https://instagram.com/__trever_c_c"
               ],
-              "description": "探索 Trever 的網頁開發項目和技能。"
+              "description": "Nice to meet you! 我是Trever，透過刻意練習深化技能，喜歡嘗試新技術開發、解決問題"
             })
           }}
         />
@@ -102,8 +102,8 @@ export default function RootLayout({ children }) {
         {children}
         <DockBar />
         <Footer />
-        <Analytics/>
-        <SpeedInsights/>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
