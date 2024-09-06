@@ -7,14 +7,14 @@ export const experiences = [
         date: "2024.05",
         title: "講者",
         subtitle: "國立高雄大學",
-        description: "於國立高雄大學資源教室職涯系列活動「畢業校友，經驗分享」講者",
+        description: "於資源教室職涯系列活動分享畢業校友經驗",
         isAward: true
     },
     {
         date: "2024.01",
         title: "承攬協辦與嘉獎",
         subtitle: "台灣植物學會",
-        description: "承攬協辦台灣植物學會-台日聯合研討會一職並榮獲中研院行政技術人員獎懲嘉獎一次",
+        description: "協辦台日聯合研討會，獲中研院行政技術人員嘉獎",
         isAward: true
     },
     {
@@ -22,16 +22,14 @@ export const experiences = [
         title: "IT Specialist",
         subtitle: "Academia Sinica",
         duties: [
-            
-            "開發大學生培育計畫報名及師生配對系統",
-            "開發高中生培育計畫報名及師生配對系統",
-            "開發人員清冊系統，實現權限分配，使業務負責人能管理各類人員資訊",
-            "建置及維護研究所官方網站和內部系統",
-            "架設、維護和管理 Linux 伺服器環境、Windows Server 及虛擬機",
-           
-            "針對常見攻擊手法，進行系統和網站的安全性開發",
-   
-            "定期進行主機漏洞掃描、檢測和修補",
+            "開發大學生培育計畫系統及師生配對系統，提升承辦人行政效率以及管理",
+            "設計高中生培育計畫系統，每年服務300+參與者，簡化管理流程",
+            "創建人員清冊系統，多位業務負責人使用，加速行政處理",
+            "建構及維護所內網站，提升對外形象",
+            "管理伺服器環境，確保系統穩定運行",
+            "實施安全性開發，降低潛在風險",
+            "定期進行漏洞掃描，減少安全事件",
+            "提供開源報到及問卷系統，節省預算，提高管理效率"
         ],
         technologies: [
             { name: "Web Development", icon: BsGlobe, color: "#1e90ff" },
@@ -53,7 +51,7 @@ export const experiences = [
         date: "2022.08",
         title: "講者",
         subtitle: "臺北市勞動力重建運用處",
-        description: "自律聯盟承辦臺北市勞動力重建運用處「職涯經驗分享講座」講者",
+        description: "於「職涯經驗分享講座」分享個人經驗",
         isAward: true
     },
     {

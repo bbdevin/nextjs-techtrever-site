@@ -11,11 +11,11 @@ const almendra = Almendra({
 
 export const metadata = {
   title: {
-    default: 'Trever | IT 專家與網頁開發者',
-    template: '%s | Trever'
+    default: 'Trever | 網頁開發者 & 身障工程師',
+    template: '%s | Trever 的個人作品集'
   },
-  description: 'Trever 是一位 IT 專家和網頁開發者，專注於創建無障礙和創新的網頁解決方案。探索他的項目和技能。',
-  keywords: ['IT 專家', '網頁開發者', '無障礙設計', '創新', '作品集', 'Trever'],
+  description: 'Trever 是一位網頁開發者和身障工程師，專注於創建無障礙和創新的網頁解決方案。探索他的項目和技能。',
+  keywords: ['網頁開發者', '身障工程師', '無障礙設計', '作品集', 'Trever'],
   authors: [{ name: 'Trever' }],
   creator: 'Trever',
   publisher: 'Trever',
@@ -27,22 +27,18 @@ export const metadata = {
   metadataBase: new URL('https://techtrever.site'),
   alternates: {
     canonical: '/',
-    languages: {
-      'zh-TW': '/zh-TW',
-      'en-US': '/en-US',
-    },
   },
   openGraph: {
-    title: "Trever | IT 專家與網頁開發者",
-    description: "探索 Trever 在網頁開發和 IT 領域的項目和技能。",
+    title: "Trever | 網頁開發者 & 身障工程師的作品集",
+    description: "探索 Trever 的網頁開發項目和技能，了解他作為身障工程師的獨特視角。",
     url: 'https://techtrever.site',
-    siteName: 'Trever 的作品集',
+    siteName: 'Trever 的個人作品集',
     images: [
       {
-        url: 'https://techtrever.site/default-og-image.jpg',
+        url: 'https://techtrever.site/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Trever - IT 專家與網頁開發者',
+        alt: 'Trever - 網頁開發者 & 身障工程師',
       },
     ],
     locale: 'zh_TW',
@@ -50,9 +46,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Trever | IT 專家與網頁開發者",
-    description: "探索 Trever 在網頁開發和 IT 領域的項目和技能。",
-    images: ['https://techtrever.site/default-og-image.jpg'],
+    title: "Trever | 網頁開發者 & 身障工程師的作品集",
+    description: "探索 Trever 的網頁開發項目和技能，了解他作為身障工程師的獨特視角。",
+    images: ['https://techtrever.site/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -90,12 +86,13 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Trever",
-              "jobTitle": "IT 專家 & 網頁開發者",
+              "jobTitle": "網頁開發者 & 身障工程師",
               "url": "https://techtrever.site",
               "sameAs": [
                 "https://github.com/bbdevin",
                 "https://instagram.com/__trever_c_c"
-              ]
+              ],
+              "description": "Trever 是一位網頁開發者和身障工程師，專注於創建無障礙和創新的網頁解決方案。"
             })
           }}
         />
