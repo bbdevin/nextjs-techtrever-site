@@ -3,7 +3,8 @@ import "./globals.css";
 import DockBar from "@/components/DockBar";
 import Footer from "@/components/Footer";
 import Script from 'next/script';
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const almendra = Almendra({ 
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -101,6 +102,8 @@ export default function RootLayout({ children }) {
         {children}
         <DockBar />
         <Footer />
+        <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   );
