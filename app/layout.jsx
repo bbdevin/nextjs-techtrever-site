@@ -14,8 +14,8 @@ export const metadata = {
     default: 'Trever | 網頁開發者 & 身障工程師',
     template: '%s | Trever 的個人作品集'
   },
-  description: 'Trever 是一位網頁開發者和身障工程師，專注於創建無障礙和創新的網頁解決方案。探索他的項目和技能。',
-  keywords: ['網頁開發者', '身障工程師', '無障礙設計', '作品集', 'Trever'],
+  description: 'Trever 是一位網頁開發者和身障工程師。',
+  keywords: ['網頁開發者', '身障工程師', '作品集', 'Trever'],
   authors: [{ name: 'Trever' }],
   creator: 'Trever',
   publisher: 'Trever',
@@ -30,7 +30,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Trever | 網頁開發者 & 身障工程師的作品集",
-    description: "探索 Trever 的網頁開發項目和技能，了解他作為身障工程師的獨特視角。",
+    description: "探索 Trever 的網頁開發項目和技能。",
     url: 'https://techtrever.site',
     siteName: 'Trever 的個人作品集',
     images: [
@@ -47,7 +47,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Trever | 網頁開發者 & 身障工程師的作品集",
-    description: "探索 Trever 的網頁開發項目和技能，了解他作為身障工程師的獨特視角。",
+    description: "探索 Trever 的網頁開發項目和技能。",
     images: ['https://techtrever.site/og-image.jpg'],
   },
   robots: {
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
                 "https://github.com/bbdevin",
                 "https://instagram.com/__trever_c_c"
               ],
-              "description": "Trever 是一位網頁開發者和身障工程師，專注於創建無障礙和創新的網頁解決方案。"
+              "description": "探索 Trever 的網頁開發項目和技能。"
             })
           }}
         />
