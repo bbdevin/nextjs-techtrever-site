@@ -4,14 +4,14 @@ import { BsGlobe } from 'react-icons/bs';
 
 export const experiences = [
     {
-        date: "2024.05",
+        date: "May 2024",
         title: "講者",
         subtitle: "國立高雄大學",
         description: "於資源教室職涯系列活動分享畢業校友經驗",
         isAward: true
     },
     {
-        date: "2024.01",
+        date: "January 2024",
         title: "承攬協辦與嘉獎",
         subtitle: "台灣植物學會",
         description: "協辦台日聯合研討會，獲中研院行政技術人員嘉獎",
@@ -53,28 +53,28 @@ export const experiences = [
         isEducation: false
     },
     {
-        date: "2022.08",
+        date: "August 2022",
         title: "講者",
         subtitle: "臺北市勞動力重建運用處",
         description: "於「職涯經驗分享講座」分享個人經驗",
         isAward: true
     },
     {
-        date: "2020.11",
+        date: "November 2020",
         title: "專刊刊登",
         subtitle: "優秀身心障礙勞工專刊",
         description: "出版於109年度優秀身心障礙勞工專刊-英雄故事",
         isAward: true
     },
     {
-        date: "2020.11",
+        date: "November 2020",
         title: "優秀身心障礙勞工獎",
         subtitle: "台北市",
         description: "榮獲台北市109年度優秀身心障礙勞工獎",
         isAward: true
     },
     {
-        date: "2020.04",
+        date: "April 2020",
         title: "工作績優人員獎",
         subtitle: "中央研究院",
         description: "榮獲中研院工作績優人員獎",
