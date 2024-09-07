@@ -1,6 +1,5 @@
-import { FaReact, FaNodeJs, FaLaravel, FaVuejs, FaLinux, FaBootstrap } from 'react-icons/fa';
-import { SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs, SiMysql, SiNginx, SiNuxtdotjs, SiFramer, SiVercel } from 'react-icons/si';
-
+import { FaReact, FaNodeJs, FaLaravel, FaVuejs, FaLinux, FaBootstrap, FaCentos } from 'react-icons/fa';
+import { SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs, SiMysql, SiNginx, SiNuxtdotjs, SiFramer, SiVercel, SiLivewire } from 'react-icons/si';
 
 export const projects = [
     {
@@ -40,7 +39,50 @@ export const projects = [
             { name: "MySQL", icon: SiMysql, color: "#4479A1" },
             { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38b2ac" },
         ],
-        link: "https://university-mentorship-program.com",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+        link: "",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        isPrivate: true
+    },
+    {
+        title: "高中生培育計畫系統",
+        description: "開發一個高中生培育計畫的報名系統及後台管理平台。系統每年處理300多名報名者，提供承辦人隨機考區配對功能，並能收集報名者匯票資料、設定筆試口試成績等。大幅提升了計畫管理效率和靈活性。",
+        technologies: [
+            { name: "Laravel", icon: FaLaravel, color: "#ff2d20" },
+            { name: "Livewire", icon: SiLivewire, color: "#fb70a9" },
+            { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38b2ac" },
+            { name: "Nginx", icon: SiNginx, color: "#009639" },
+            { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+            { name: "Rocky Linux", icon: FaLinux, color: "#10B981" },
+        ],
+        link: "",
+        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+        isPrivate: true
+    },
+    {
+        title: "會議室及儀器預約系統",
+        description: "開發一個直觀的會議室與儀器預約系統。使用者可以清楚地查看會議室和儀器在特定日期和時段的可用性。系統還實現了儀器使用量的配額限制，讓使用者能夠了解自己的預約配額。大大提高了資源管理效率和使用透明度。",
+        technologies: [
+            { name: "Laravel", icon: FaLaravel, color: "#ff2d20" },
+            { name: "Bootstrap 4", icon: FaBootstrap, color: "#7952B3" },
+            { name: "Nginx", icon: SiNginx, color: "#009639" },
+            { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+            { name: "Rocky Linux", icon: FaLinux, color: "#10B981" },
+        ],
+        link: "",
+        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
+        isPrivate: true
+    },
+    {
+        title: "所內內部系統",
+        description: "開發一個安全可靠的所內內部系統，提供專屬於所內成員的資訊平台。系統整合了各項計畫資訊、行政文件管理，以及其他敏感數據，確保資訊的保密性和可訪問性。通過嚴格的權限控制，大大提升了所內資訊共享和管理效率。",
+        technologies: [
+            { name: "Laravel", icon: FaLaravel, color: "#ff2d20" },
+            { name: "Bootstrap 3", icon: FaBootstrap, color: "#7952B3" },
+            { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+            { name: "CentOS", icon: FaCentos, color: "#262577" },
+        ],
+        link: "",
+        image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80",
+        isPrivate: true
     }
 ];
