@@ -6,7 +6,7 @@ const WhoIAm = ({ containerVariants }) => {
         { name: 'Gaming', icon: FaGamepad },
         { name: 'Stock Market', icon: FaChartLine },
         { name: 'Movie', icon: FaFilm },
-        { name: 'Food', icon: FaUtensils }
+        { name: 'Foodie', icon: FaUtensils }
     ];
 
     return (
