@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className="h-screen w-full overflow-hidden bg-cover bg-center bg-no-repeat z-10 flex flex-col relative">
+    <div className="min-h-screen w-full overflow-y-auto bg-cover bg-center bg-no-repeat z-10 flex flex-col relative">
       <Image
         src="/background.webp"
         alt="背景圖片"
@@ -29,11 +29,11 @@ const Hero = () => {
         className="block sm:hidden"
         aria-hidden="true"
       />
-      <div className="relative z-10 flex flex-col h-full w-full">
+      <div className="relative z-10 flex flex-col min-h-screen w-full">
         <Header />
-        <main className="flex flex-col items-center justify-center flex-grow px-4 py-4 mt-16 sm:mt-20 md:mt-24 w-full">
+        <main className="flex flex-col items-center justify-center flex-grow px-4 py-8 mt-16 sm:mt-20 md:mt-24 w-full">
           <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center space-y-4">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80">
               <Photo />
             </div>
 
@@ -41,7 +41,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold"
             >
               <SparklesText text={"I'm Trever"} />
             </motion.h1>
@@ -52,23 +52,23 @@ const Hero = () => {
               transition={{ duration: 0.3 }}
               className="flex flex-col items-center space-y-2"
             >
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-300">
                 IT Specialist & Web Developer
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 max-w-md">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-400 max-w-md">
                 透過刻意練習深化技能，喜歡嘗試新技術開發、解決問題
               </p>
             </motion.div>
 
-            <div className="flex flex-wrap justify-center gap-2 mt-4" aria-label="技能列表">
+            <div className="flex flex-wrap justify-center gap-2 mt-2" aria-label="技能列表">
               {['Laravel', 'Vue.js', 'JavaScript', 'Tailwind CSS', 'Linux'].map((skill, index) => (
-                <span key={index} className="bg-gray-800 bg-opacity-50 text-gray-300 px-3 py-1 rounded-full text-sm border border-gray-700">
+                <span key={index} className="bg-gray-800 bg-opacity-50 text-gray-300 px-2 py-1 rounded-full text-xs sm:text-sm border border-gray-700">
                   {skill}
                 </span>
               ))}
             </div>
 
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4 mt-4">
               <SocialIcon href="https://github.com/bbdevin" icon={FaGithub} label="GitHub" />
               <SocialIcon href="https://instagram.com/__trever_c_c" icon={FaInstagram} label="Instagram" />
             </div>
