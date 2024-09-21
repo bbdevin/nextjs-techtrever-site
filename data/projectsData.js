@@ -1,5 +1,5 @@
-import { FaReact, FaNodeJs, FaLaravel, FaVuejs, FaLinux, FaBootstrap, FaCentos } from 'react-icons/fa';
-import { SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs, SiMysql, SiNginx, SiNuxtdotjs, SiFramer, SiVercel, SiLivewire } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaLaravel, FaVuejs, FaLinux, FaBootstrap, FaCentos, FaPython } from 'react-icons/fa';
+import { SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs, SiMysql, SiNginx, SiNuxtdotjs, SiFramer, SiVercel, SiLivewire, SiInertia, SiFlask, SiNetlify } from 'react-icons/si';
 
 export const projects = [
     {
@@ -14,6 +14,19 @@ export const projects = [
         ],
         link: "https://techtrever.site",
         image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80"
+    },
+    {
+        title: "台股籌碼分點系統查詢",
+        description: "採用前後端分離架構，打造出追蹤台股分點的系統。前端使用 Next.js 構建直觀的用戶界面，後端採用 Flask API 處理數據。系統能夠列出關鍵分點，幫助投資者更好地分析市場動向。",
+        technologies: [
+            { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+            { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38b2ac" },
+            { name: "Flask", icon: SiFlask, color: "#000000" },
+            { name: "Python", icon: FaPython, color: "#3776AB" },
+            { name: "Netlify", icon: SiNetlify, color: "#00C7B7" },
+        ],
+        link: "https://stock.techtrever.site",
+        image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
     },
     {
         title: "人員清冊系統",
@@ -83,6 +96,22 @@ export const projects = [
         ],
         link: "",
         image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80",
+        isPrivate: true
+    },
+    {
+        title: "PI 研究員徵才系統",
+        description: "開發一個高效的研究員徵才報名系統，為承辦人提供便捷的報名者資料管理和匯出功能。系統優化了徵才流程，提高了資料處理效率，使人才篩選更加精準和便捷。",
+        technologies: [
+            { name: "Laravel", icon: FaLaravel, color: "#ff2d20" },
+            { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+            { name: "Nginx", icon: SiNginx, color: "#009639" },
+            { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38b2ac" },
+            { name: "Livewire", icon: SiLivewire, color: "#fb70a9" },
+            { name: "Rocky Linux", icon: FaLinux, color: "#10B981" },
+            { name: "Inertia.js", icon: SiInertia, color: "#9553E9" },
+        ],
+        link: "",
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         isPrivate: true
     }
 ];
