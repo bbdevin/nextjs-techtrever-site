@@ -12,10 +12,10 @@ const almendra = Almendra({
 
 export const metadata = {
   title: {
-    default: 'Trever | 網頁開發者 & 身障工程師',
+    default: 'Trever | 網頁開發者 & 身障工程師的作品集',
     template: '%s | Trever 的個人作品集'
   },
-  description: 'Trever 是一位網頁開發者和身障工程師。',
+  description: 'Nice to meet you! 我是Trever，一位使用電動輪椅的網頁開發者，透過刻意練習深化技能，喜歡嘗試新技術開發、解決問題',
   keywords: ['網頁開發者', '身障工程師', '作品集', 'Trever'],
   authors: [{ name: 'Trever' }],
   creator: 'Trever',
